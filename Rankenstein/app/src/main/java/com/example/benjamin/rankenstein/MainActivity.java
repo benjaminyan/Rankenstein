@@ -16,7 +16,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
-    EditText emailField;
+    EditText usernameField;
     EditText passwordField;
     Button loginButton;
     Button createNewAccountButton;
@@ -48,11 +48,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void login(){
-        emailField = findViewById(R.id.emailField);
+        usernameField = findViewById(R.id.usernameField);
         passwordField = findViewById(R.id.passwordField);
-        String email = emailField.getText().toString();
+        String username = usernameField.getText().toString();
         String password = passwordField.getText().toString();
-        if(email.toLowerCase().equals("benjamin.yan@rutgers.edu") && password.equals("dummypassword")){
+        if(username.toLowerCase().equals("by120") && password.equals("dummypassword")){
             Intent intent = new Intent(this, HomeActivity.class);
             startActivityForResult(intent, HOME_CODE);
         }

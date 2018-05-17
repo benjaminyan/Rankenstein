@@ -2,10 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.benjamin.rankenstein">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="Rankenstein"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/DarkTheme">
@@ -16,16 +19,46 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CreateNewAccount">
+        <activity
+            android:name=".CreateNewAccount"
+            android:label="Create New Account">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.benjamin.rankenstein.MainActivity" />
         </activity>
-
-        <activity android:name=".HomeActivity"  android:label="Home">
+        <activity
+            android:name=".HomeActivity"
+            android:label="Home" />
+        <activity
+            android:name=".OpenRank"
+            android:label="Display Rank">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.benjamin.rankenstein.MainActivity" />
+                android:value="com.example.benjamin.rankenstein.HomeActivity" />
+        </activity>
+        <activity
+            android:name=".Settings"
+            android:label="Settings">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.benjamin.rankenstein.HomeActivity" />
+        </activity>
+        <activity
+            android:name=".CreateRank"
+            android:label="Create Rank">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.benjamin.rankenstein.HomeActivity" />
+        </activity>
+        <activity android:name=".AddFriend" android:label="Add Friend">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.benjamin.rankenstein.HomeActivity" />
+        </activity>
+        <activity android:name=".FriendList" android:label="Friends List">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.benjamin.rankenstein.HomeActivity" />
         </activity>
     </application>
 
