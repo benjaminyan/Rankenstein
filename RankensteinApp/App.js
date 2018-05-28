@@ -157,7 +157,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#4682b4',
   },
   titleText: {
-    fontFamily: 'sans-serif',
+    fontFamily: Platform.OS === 'ios' ? 'Arial' : 'sans-serif',
     fontSize: 40,
     fontWeight: 'bold',
     color: 'white',
