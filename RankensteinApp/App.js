@@ -11,7 +11,7 @@ class LoginScreen extends React.Component{
   state = {
       username: '',
       password: '',
-	  titleText: "Rankenstein",
+      titleText: "Rankenstein",
   }
   handleUsername = (text) => {
       this.setState({ username: text })
@@ -25,30 +25,30 @@ class LoginScreen extends React.Component{
   render() {
     return (
       <View style={styles.container}>
-		<Text style={styles.titleText} onPress={this.onPressTitle}>
-          {'\n'}{this.state.titleText}{'\n'}{'\n'}
+        <Text style={styles.titleText} onPress={this.onPressTitle}>
+        {'\n'}{this.state.titleText}{'\n'}{'\n'}
         </Text>
-		<TextInput style = {styles.input}
+        <TextInput style = {styles.input}
            underlineColorAndroid = "transparent"
            placeholder = "Username"
            placeholderTextColor = "#fff"
            autoCapitalize = "none"
            onChangeText = {this.handleUsername}/>
-		<TextInput style = {styles.input}
-		   secureTextEntry={true}
+        <TextInput style = {styles.input}
+           secureTextEntry={true}
            underlineColorAndroid = "transparent"
            placeholder = "Password"
            placeholderTextColor = "#fff"
            autoCapitalize = "none"
            onChangeText = {this.handlePassword}/>
-		<TouchableOpacity
+        <TouchableOpacity
                style = {styles.submitButton}
                onPress = {
                   () => this.login(this.state.username, this.state.password)
                }>
                <Text style = {styles.submitButtonText}> Login </Text>
         </TouchableOpacity>
-		<TouchableOpacity
+        <TouchableOpacity
                style = {styles.submitButton}
                onPress = {
                   () => this.props.navigation.navigate('Create',{title: 'WHATEVER'})
@@ -61,7 +61,7 @@ class LoginScreen extends React.Component{
 }
 
 class HomeScreen extends React.Component {
-	render() {
+    render() {
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
         <Text>Details Screen</Text>
@@ -71,23 +71,23 @@ class HomeScreen extends React.Component {
 }
 
 class CreateAccountScreen extends React.Component {
-	state = {
-      username: '',
-      password: '',
-	  verifypass: '',
-	  email: '',
+  state = {
+    username: '',
+    password: '',
+	verifypass: '',
+	email: '',
   }
   handleUsername = (text) => {
-      this.setState({ username: text })
+    this.setState({ username: text })
   }
   handlePassword = (text) => {
-      this.setState({ password: text })
+    this.setState({ password: text })
   }
   handleVerifypass = (text) => {
-	  this.setState({verifypass: text})
+    this.setState({verifypass: text})
   }
   handleEmail = (text) => {
-	  this.setState({email: text})	
+    this.setState({email: text})	
   }
   createAccount = (username, pass, verifypass, email) => {
       alert('email: ' + email + ' username: ' + username + ' password: ' + pass + ' verify password: ' + verifypass)
@@ -101,27 +101,27 @@ class CreateAccountScreen extends React.Component {
            placeholderTextColor = "#fff"
            autoCapitalize = "none"
            onChangeText = {this.handleEmail}/>
-		<TextInput style = {styles.input}
+        <TextInput style = {styles.input}
            underlineColorAndroid = "transparent"
            placeholder = "Username"
            placeholderTextColor = "#fff"
            autoCapitalize = "none"
            onChangeText = {this.handleUsername}/>
-		<TextInput style = {styles.input}
-		   secureTextEntry={true}
+        <TextInput style = {styles.input}
+           secureTextEntry={true}
            underlineColorAndroid = "transparent"
            placeholder = "Password"
            placeholderTextColor = "#fff"
            autoCapitalize = "none"
            onChangeText = {this.handlePassword}/>
-		<TextInput style = {styles.input}
-		   secureTextEntry={true}
+        <TextInput style = {styles.input}
+           secureTextEntry={true}
            underlineColorAndroid = "transparent"
            placeholder = "Verify Password"
            placeholderTextColor = "#fff"
            autoCapitalize = "none"
            onChangeText = {this.handleVerifypass}/>
-		<TouchableOpacity
+        <TouchableOpacity
                style = {styles.submitButton}
                onPress = {
                   () => this.createAccount(this.state.username, this.state.password,this.state.verifypass,this.state.email)
@@ -152,23 +152,23 @@ export default class App extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-	paddingTop: 23,
-	flex: 1,
+    paddingTop: 23,
+    flex: 1,
     backgroundColor: '#4682b4',
   },
   titleText: {
-	fontFamily: 'sans-serif',
+    fontFamily: 'sans-serif',
     fontSize: 40,
     fontWeight: 'bold',
-	color: 'white',
-	textAlign: 'center',
+    color: 'white',
+    textAlign: 'center',
   },
   input: {
       margin: 15,
       height: 40,
       borderColor: '#7a42f4',
       borderWidth: 1,
-	  color: 'white',
+      color: 'white',
    },
    submitButton: {
       backgroundColor: '#7a42f4',
